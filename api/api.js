@@ -84,8 +84,8 @@ async function api() {
 	console.log(profile);
 }
 if (require.main === module) {
-	api()
-	console.log("This only runs when file1.js is executed directly");
+	api().catch((err) => console.error(err));
+	console.log("Running api.js");
 }
 
 

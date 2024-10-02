@@ -66,4 +66,7 @@ async function leaderboards(season) {
 	});
 }
 
-generateLeaderboards().catch((err) => console.error(err));
+if (require.main === module) {
+	generateLeaderboards().catch((err) => console.error(err));
+	console.log("Running getLeaderboards.js");
+}

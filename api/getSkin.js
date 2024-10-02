@@ -28,10 +28,10 @@ async function getSkins(id, token) {
 async function Skin105() {
 	let token = await updateToken();
 
-	let Skins = await getSkins(presetUsers[3], token);
+	let Skins = await getSkins(user_id1, token);
 	console.log(Skins);
 }
 if (require.main === module) {
-  Skin105();
-	console.log("This only runs when file1.js is executed directly");
+  Skin105().catch((err) => console.error(err));
+	console.log("This only runs when getSkin.js is executed directly");
 }

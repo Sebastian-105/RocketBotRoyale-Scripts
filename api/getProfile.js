@@ -44,11 +44,11 @@ async function returnKillstreaks() {
 	let ks = await killstreaks(user_id, token);
   console.log(ks)
 }
-// returnKillstreaks()
+// returnKillstreaks().catch((err) => console.error(err));
 
 async function returnStatus() {
 	let token = await updateToken()
 	let content = await getStatus(user_id, token);
 	console.log(content)
 }
-returnStatus();
+returnStatus().catch((err) => console.error(err));
