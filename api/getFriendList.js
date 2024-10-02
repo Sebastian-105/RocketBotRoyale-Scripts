@@ -35,6 +35,6 @@ async function FriendList() {
 	console.log(friendList, "success");
 }
 if (require.main === module) {
-	friendList().catch((err) => console.error(err));
+	FriendList().catch((err) => console.error(err));
 	console.log("Running getFriendList.js");
 }
