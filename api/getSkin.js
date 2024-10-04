@@ -5,7 +5,7 @@ const fs = require('fs');
 const user_id1 = process.argv.slice(2);
 const baseURL = 'https://dev-nakama.winterpixel.io/v2';
 // Use presets to target people, fr
-const presetUsers = [
+const users = [
   "19c33df9-1225-4c79-b4d7-3ed3988a315e", //Envixity
   "c0059131-9425-4bf1-b37e-f59cc83e9bc7", // Ninjaprime
   "7bb4cb45-b858-491e-9904-95018460f586", // Sebastian
@@ -28,7 +28,7 @@ async function getSkins(id, token) {
 async function Skin105() {
 	let token = await updateToken();
 
-	let Skins = await getSkins(user_id1, token);
+	let Skins = await getSkins(users[0], token);
 	console.log(Skins);
 }
 if (require.main === module) {
