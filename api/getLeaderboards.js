@@ -57,7 +57,8 @@ async function generateLeaderboards() {
 async function writeLeaderboards(newContent) {
   const fs = require("fs").promises;
   
-	await fs.writeFile(`./newLeaderboards/season_${season}.txt`, `Leaderboards for season ${season}\n===================================================\n`, )
+	await fs.writeFile(`./newLeaderboards/season_${season}.txt`, `Leaderboards for season ${season}\n==============================================================
+\n`, )
 	await fs.appendFile(`./newLeaderboards/season_${season}.txt`, newContent)
 }
 async function leaderboards(season) {
